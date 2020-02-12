@@ -1,0 +1,108 @@
+﻿/* ==========================================================================
+   SASS Base: Variables, mixins, etc.
+   ========================================================================== */
+
+$base-font-size: 19;
+
+$line-height: 1.5 !default;
+$font-color: #222 !default;
+
+$color-primary: #0d98d8 !default;
+
+$blue: #007cbc;
+$bluealt: #90d4f7;
+$orange: #f48b45;
+$red: #c51941;
+$green: #43bb98;
+$purple: #6f2b46;
+$darkpurple: #330066;
+$grey: #474747;
+
+$mecp-darkblue:#005675;
+$mecp-blue:#198AB4;
+$mecp-green:#6DBE45;
+$mecp-darkgrey:#2F4F4F;
+
+$link-color: $color-primary;
+$link-hover-color: $color-primary;
+$link-visited-color: $color-primary;
+
+$bootstrap-sass-asset-helper: false;
+
+// If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.
+// This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
+$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../MECP/fonts/bootstrap/") !default;
+
+//** File name for all font files.
+$icon-font-name:          "glyphicons-halflings-regular" !default;
+//** Element ID within SVG icon file.
+$icon-font-svg-id:        "glyphicons_halflingsregular" !default;
+
+
+/*
+ * Easy conversion to em from pixels
+ */
+@function _em($target, $context: $base-font-size) {
+    @if $target == 0 { @return 0 }
+    @return $target / $context + 0em;
+}
+
+/*
+ * Using variation specific font names from the start to avoid IE8 issues
+ * http://help.typekit.com/customer/portal/articles/6855-Using-multiple-weights-and-styles
+ */
+@mixin font($weight, $style: normal) {
+    @if $weight == light {
+        @if $style == italic {
+            font-family: "karbonlight_italic", sans-serif;
+            font-style: italic;
+        } @else {
+            font-family: "karbonlight", sans-serif;
+            font-style: normal;
+        }
+        font-weight: 300;
+    } @else if $weight == regular {
+        @if $style == italic {
+            font-family: "karbonregular_italic", sans-serif;
+            font-style: italic;
+        } @else {
+            font-family: "karbonregular", sans-serif;
+            font-style: normal;
+        }
+        font-weight: 400;
+        } @else if $weight == medium {
+        @if $style == italic {
+            font-family: "karbonmedium_italic", sans-serif;
+            font-style: italic;
+        } @else {
+            font-family: "karbonmedium", sans-serif;
+            font-style: normal;
+        }
+        font-weight: 500;
+        } @else if $weight == semibold {
+        @if $style == italic {
+            font-family: "karbonsemibold_italic", sans-serif;
+            font-style: italic;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        } @else {
+            font-family: "karbonsemibold", sans-serif;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        font-weight: 600;
+    } @else if $weight == bold {
+        @if $style == italic {
+            font-family: 'karbonsemibold_italic';
+            font-style: italic;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        } @else {
+            font-family: 'karbonbold';
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    }
+}

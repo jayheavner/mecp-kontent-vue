@@ -1,0 +1,14 @@
+/* global variables, mixins, functions, etc. */
+@import "../sass/config.scss";
+@import "../sass/libs/bootstrap/bootstrap.scss";
+@import "../sass/modules/bootstrap-helpers.scss";
+
+/* user defined base styles */
+@import "../sass/base/body.scss";
+// @import "../sass/base/fonts.scss";
+
+/* module or section specific styles */
+
+@import "../sass/modules/buttons.scss";
+@import "../sass/modules/hero.scss";
+

@@ -1,0 +1,101 @@
+﻿.sticky {
+    background: $mecp-darkblue;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: all 0.3s ease-in 0.0s;
+    -o-transition: all 0.3s ease-in 0.0s;
+    -moz-transition: all 0.3s ease-in 0.0s;
+    -webkit-transition: all 0.3s ease-in 0.0s;
+    @include media-breakpoint-down(lg) {
+        padding: 0 _em(16) 0 _em(16);
+    }
+    .sticky-logo {
+        display: block !important;
+        width: 50%;
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+    }
+    .nav {
+        li {
+            padding-top: _em(25);
+            padding-bottom: _em(25);
+            vertical-align: top;
+            a {
+                opacity: 1;
+            }
+        }
+    }
+    .main-nav {
+        width: 100%;
+        margin: 0;
+        li {
+            padding-right: _em(8);
+            padding-left: _em(8);
+            @include media-breakpoint-up(lg) {
+                padding-right: _em(15);
+                padding-left: _em(15);
+            }
+            @include media-breakpoint-up(md) {
+                padding-top: _em(13);
+                padding-bottom: _em(13);
+            }
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            &.current-page {
+                background: $mecp-blue;
+                @include media-breakpoint-down(sm) {
+                    background: none;
+                }
+                a {
+                    color: $mecp-green;
+                    font-weight: bold;
+                }
+            }
+            a {
+                font-size: _em(16);
+                span.nav-text {
+                    @media (max-width: 1310px) {
+                        display: inline-block;
+                        font-size: _em(16);
+                    }
+                    @include media-breakpoint-down(sm) {
+                        display: none;
+                    }
+                }
+                &.toggle {
+                    font-size: _em(22);
+                    display: block;
+                    .nav-text {
+                        font-size: _em(16, 22);
+                    }
+                }
+            }
+            @include media-breakpoint-down(lg) {
+                margin: 0;
+            }
+        }
+        @include media-breakpoint-down(md) {
+            width: auto;
+            display: inline;
+            float: right;
+            margin: 0;
+            margin-right: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .utility-nav {
+        margin-top: _em(25);
+        li {
+            a {
+                font-size: _em(18);
+                .nav-text {
+                    opacity: 1;
+                    font-size: _em(16);
+                }
+            }
+        }
+    }
+}

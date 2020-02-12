@@ -1,0 +1,122 @@
+﻿.logo {
+    display: block;
+    @include media-breakpoint-up(md) {
+        padding-left: _em(60);
+    }
+    float: left;
+    height: auto;
+    max-width: _em(272);
+    a {
+        width: 50%;
+        float: left;
+        color: white;
+        img {
+            width: 100px;
+        }
+        @include media-breakpoint-down(md) {
+            min-width: _em(180);
+        }
+    }
+}
+.sticky-logo {
+    width: 100% !important;
+    margin: _em(7) 0;
+    @include media-breakpoint-down(lg) {
+        width: 100%;
+    }
+    .content {
+        margin-top: 0.5rem;
+    }
+}
+.page-section-header {
+    padding-top: _em(45);
+    padding-bottom: _em(45);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    transition: all 0.3s ease-in 0.0s;
+    -o-transition: all 0.3s ease-in 0.0s;
+    -moz-transition: all 0.3s ease-in 0.0s;
+    -webkit-transition: all 0.3s ease-in 0.0s;
+    @include media-breakpoint-down(md) {
+        background: $mecp-darkblue;
+        padding: 0 _em(16) 0 _em(16);
+    }
+}
+.mainBlock {
+    padding-top: 150px;
+    min-height: 80vh;
+}
+.nav {
+    ul {
+        list-style: none;
+        padding: 0;
+        @include media-breakpoint-down(sm) {
+            height: _em(75);
+        }
+        li {
+            @include media-breakpoint-down(md) {
+                padding-top: _em(13);
+                vertical-align: top;
+            }
+            @include media-breakpoint-down(sm) {
+                padding-top: _em(25);
+                padding-bottom: _em(25);
+                vertical-align: top;
+            }
+            @include media-breakpoint-down(md) {
+                padding-left: _em(8);
+                padding-right: _em(8);
+            }
+        }
+    }
+}
+.subnav {
+    background: $mecp-blue;
+    margin-left: _em(-60);
+    margin-right: _em(-60);
+    .scrollable {
+        @media (max-width: 1100px) {
+            overflow-x: auto;
+        }
+    }
+    .scrollable ul {
+        @media (max-width: 1100px) {
+            min-width: _em(1050);
+        }
+    }
+    ul {
+        display: block;
+        text-align: center;
+        box-sizing: content-box;
+        margin: 0 auto;
+        @include media-breakpoint-down(xs) {
+            text-align: left;
+            padding-left: _em(60);
+        }
+        li {
+            display: inline-block;
+            padding: _em(10) 0;
+            margin: 0 _em(20);
+            a {
+                color: #fff;
+                font-size: _em(16);
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            &.current-page {
+                position: relative;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    border-bottom: 4px solid $mecp-green;
+                    width: 100%;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}

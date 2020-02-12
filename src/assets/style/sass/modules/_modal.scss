@@ -1,0 +1,25 @@
+﻿.modal-content.hamburgerModal {
+    height: auto;
+    min-height: 100%;
+    font-size: xx-large;
+    opacity: 0.8;
+    background: #0B4F77;
+    .innerLinks {
+        padding-top: _em(50);
+        @include media-breakpoint-down(md) {
+            padding-top: _em(25);
+        }
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            margin: _em(25) 0;
+            display: block;
+        }
+    }
+    .close {
+        color: #fff;
+        opacity: 1;
+        font-size: xx-large;
+    }
+}

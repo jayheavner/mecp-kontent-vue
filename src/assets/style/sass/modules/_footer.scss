@@ -1,0 +1,11 @@
+﻿.page-section-footer {
+    background: $mecp-green;
+    color: white;
+    padding: _em(60) 0;
+    position: relative;
+    z-index: 1;
+
+    @include media-breakpoint-down(sm) {
+        padding: _em(20) 0;
+    }
+}

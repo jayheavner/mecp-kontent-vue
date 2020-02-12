@@ -1,0 +1,42 @@
+﻿.btn.outline {
+    background-color: rgba(0,0,0, 0.4);
+    padding: 12px 22px;
+    border-radius: 0;
+    width: _em(220);
+    &:hover{
+        background-color: $mecp-darkblue;
+    }
+}
+
+.btn-primary.outline {
+    border: 2px solid white;
+    color: white;
+    margin-left: _em(20);
+
+    @include media-breakpoint-down(md) {
+        margin-bottom: _em(20);
+    }
+}
+
+.btn-primary.outline:active, .btn-primary.outline.active {
+    background-color: rgba(0,0,0, 0.4);
+    border-color: white;
+    color: white;
+    box-shadow: none;
+}
+
+.link-button {
+    display: block;
+    text-align: center;
+    color: white;
+    background: $mecp-darkblue;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    font-size: _em(24);
+    &:hover {
+        color: white !important;
+    }
+    span {
+        float: right;
+    }
+}

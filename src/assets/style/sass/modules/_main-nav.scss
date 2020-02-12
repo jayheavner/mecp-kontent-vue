@@ -1,0 +1,77 @@
+﻿.main-nav {
+    text-align: right;
+    display: block;
+
+    @include media-breakpoint-down(lg) {
+        width: 100%;
+        margin-right: _em(10);
+    }
+
+    li {
+        display: inline-block;
+        font-size: _em(18);
+        line-height: _em(25, 18);
+        padding-left: _em(20, 18);
+        padding-right: _em(20, 18);
+
+        @include media-breakpoint-down(lg) {
+            padding-left: _em(12, 18);
+            padding-right: _em(12, 18);
+        }
+
+        @include media-breakpoint-down(lg) {
+            margin: 0 _em(15);
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 0;
+            vertical-align: top;
+        }
+
+        &.subnav {
+            ul {
+                display: none;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            @include font(regular, normal);
+
+            span[class*="icon"] {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            @include media-breakpoint-down(md) {
+                font-size: _em(16);
+                opacity: 1;
+
+                &.toggle {
+                    display: block;
+                    font-size: _em(22);
+                }
+
+                .icon-menu {
+                    margin-left: _em(10, 22);
+
+                    @include media-breakpoint-down(sm) {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-down(lg) {
+            margin: 0;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        display: inline;
+        float: right;
+        margin: 0;
+        width: auto;
+    }
+}

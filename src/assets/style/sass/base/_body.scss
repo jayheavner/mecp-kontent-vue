@@ -1,0 +1,30 @@
+﻿html, body {
+    font-size: $base-font-size + 0px !important;
+    @include font(regular);
+    color: #171314;
+    background-color:white;
+}
+
+h2 {
+    @include font(medium);
+    font-size: _em(45);
+    color: $mecp-darkgrey;
+}
+
+a {
+    color: $mecp-blue;
+    &:hover {
+        color: $mecp-darkblue;
+        text-decoration: none;
+    }
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.logo-wrapper {
+    img {
+        width: 100%;
+    }
+}

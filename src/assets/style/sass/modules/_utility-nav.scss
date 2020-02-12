@@ -1,0 +1,104 @@
+﻿.utility-nav {
+    text-align: right;
+    display: block;
+    margin-top: _em(25);
+    margin-bottom: 0;
+    li {
+        display: inline-block;
+        font-size: _em(18);
+        padding-left: _em(20, 18);
+        padding-right: _em(20, 18);
+        overflow: auto;
+        padding-top: _em(12);
+        padding-bottom: 0;
+
+        a {
+            display: block;
+            text-decoration: none;
+            @include font(regular, normal);
+            color: #ffffff;
+            span[class*="icon"] {
+                opacity: 1;
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 1.25;
+
+                @include media-breakpoint-down(lg) {
+                    vertical-align: top;
+                }
+            }
+
+            .nav-text {
+                margin-right: _em(10, 18);
+                display: inline-block;
+                vertical-align: middle;
+
+                @include media-breakpoint-down(lg) {
+                    opacity: 1;
+                    display: inline-block;
+                    font-size: em(16);
+                    margin-right: _em(5);
+                    vertical-align: top;
+                }
+            }
+
+            &:hover {
+                .nav-text {
+                    opacity: 1;
+                }
+            }
+
+            @include media-breakpoint-down(lg) {
+                font-size: _em(18);
+            }
+
+            @include media-breakpoint-down(md) {
+                &.search-toggle, &.login-toggle {
+                    margin-left: _em(20);
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                &.search-toggle, &.login-toggle {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(lg) {
+            margin: 0 _em(20) 0 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        @include media-breakpoint-down(md) {
+            margin: 0 !important;
+            padding-left: 1.5%;
+            padding-right: 1.5%;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-left: _em(11);
+            padding-right: _em(8);
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        display: inline;
+        width: auto;
+        float: right;
+        padding-left: 0;
+    }
+}
+
+.sticky {
+    .utility-nav {
+        .nav-text {
+            vertical-align: top;
+        }
+        span[class*="icon"] {
+            vertical-align: top;
+            line-height: 1.25;
+        }
+    }
+}

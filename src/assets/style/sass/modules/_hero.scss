@@ -1,0 +1,174 @@
+﻿.bg-hero.full-height.home {
+    width: 100%;
+    height: 100vh;
+    min-height: _em(650);
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    @include media-breakpoint-down(lg) {
+        min-height: _em(650);
+    }
+
+    @include media-breakpoint-down(md) {
+        min-height: _em(450);
+    }
+
+    @include media-breakpoint-down(sm) {
+        background-size: 100%;
+        max-height: _em(500);
+        min-height: _em(50);
+        overflow: visible;
+    }
+    .sticky-item {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+    .sticky-item:before, .sticky-item:after {
+        content: '';
+        display: table;
+    }
+    #mission-statement {
+        padding-bottom: _em(70);
+        top: _em(350);
+        @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) { 
+            padding-top: _em(70);
+        }
+        @media (max-width: 768px) and (orientation: portrait) {
+            padding-top: _em(145);
+            transform: translateY(0);
+            -webkit-transform: translateY(0);
+            -moz-transform: translateY(0);
+        }
+    }
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        height: 100%;
+    }
+    .scroll-down-button {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: _em(70, 40);
+        height: _em(70, 40);
+        margin-left: _em(-35, 40);
+        line-height: _em(70, 40);
+        color: #fff;
+        text-align: center;
+        font-size: _em(40);
+        background: rgba(#90d4f7, 0.10);
+        outline: 0;
+        &:visited {
+            color: #fff;
+        }
+        &:hover, &:focus {
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(#90d4f7, 0.30);
+        }
+    }
+}
+.bg-hero.full-height {
+    padding: 0;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    min-height: _em(650);
+    @include media-breakpoint-down(lg) {
+        min-height: _em(650);
+    }
+    @include media-breakpoint-down(md) {
+        min-height: _em(450);
+    }
+    @include media-breakpoint-down(sm) {
+        max-height: _em(410);
+        min-height: _em(50);
+        overflow: visible;
+    }
+    .subPage {
+        height: 100vh;
+    }
+    .container {
+        position: relative;
+        height: 100%;
+    }
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+        background-position: right top;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;
+    }
+    .content {
+        width: 100%;
+        z-index: 0;
+        left: 0;
+        right: 0;
+        top: 350px;
+        .title {
+            color: #ffffff;
+            @include font(light, normal);
+            font-size: _em(70);
+            line-height: 1;
+            letter-spacing: _adobe_tracking_to_em(-50);
+            text-align: left;
+            font-weight: lighter;
+            padding: 0 _em(20, 107);
+            max-width: _em(1700, 107);
+            margin: 0 auto;
+            span {
+                color: #a1daf8;
+                font-weight: semibold;
+            }
+            @media(max-width: _em(1400)) {
+                font-size: _em(60);
+                padding: 0 _em(20, 100);
+            }
+            @media(max-width: _em(1325)) {
+                font-size: _em(60);
+                padding: 0 _em(20, 90);
+            }
+            @media(max-width: _em(1024)) {
+                font-size: _em(50);
+                padding: 0 _em(20, 80);
+            }
+            @media(max-width: _em(960)) {
+                font-size: _em(50);
+                padding: 0 _em(20, 70);
+            }
+            @media(max-width: _em(800)) {
+                font-size: _em(40);
+                padding: 0 _em(20, 50);
+            }
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
+        .buttons {
+            text-align: center;
+            a {
+                @media (max-width: _em(800)) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

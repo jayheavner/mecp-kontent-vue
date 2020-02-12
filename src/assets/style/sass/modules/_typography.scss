@@ -1,0 +1,28 @@
+﻿h3 {
+	@include font(medium, regular);
+	margin-bottom: _em(20);
+	margin-top: _em(15);
+}
+h6 {
+	font-size: _em(23);
+	@include font(regular, italic);
+
+    &.summary {
+	    margin-bottom: _em(30, 23);
+    }
+}
+p {
+    @include font(regular);
+}
+strong {
+	@include font(semibold, regular);
+}
+em {
+	@include font(regular, italic);
+}
+strong > em {
+    @include font(semibold, italic);
+}
+em > strong {
+    @include font(semibold, italic);
+}
