@@ -26,7 +26,8 @@ export function flatten(obj) {
     try {
     t = hasOwnProperty(obj[prop], 'value');
     } catch (ex) {
-      debugger;
+      //debugger;
+      console.log(`ERROR - ${ex}`);
     }
     if (t)
       if (obj[prop].type === 'asset') {

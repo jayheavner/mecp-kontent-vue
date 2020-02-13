@@ -7,7 +7,16 @@ import { ContentItem, Elements } from '@kentico/kontent-delivery';
 export class Promo extends ContentItem {
   constructor() {
     super({
-      richTextResolver: promo => {
+      richTextResolver: (rawElement) => {
+        debugger;
+      },
+      itemResolver: (rawElement) => {
+        debugger;
+      },
+      linkedItemResolver: (rawElement) => {
+        debugger;
+      },
+      urlSlugResolver: (rawElement) => {
         debugger;
       },
       propertyResolver: elementName => {

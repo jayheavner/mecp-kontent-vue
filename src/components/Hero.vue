@@ -32,6 +32,7 @@ export default {
   },
   data: () => ({ imageUrl: String }),
   mounted: function() {
+    debugger;
     this.url = this.image.url;
   },
 };

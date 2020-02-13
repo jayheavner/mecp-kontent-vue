@@ -19,13 +19,14 @@ class MECP extends BaseStore {
     // } else {
     // debugger;
 
-    let query = Client.item(codeName).depthParameter(10)
+    let query = Client.item(codeName)//.depthParameter(10)
 
     query
       .toObservable()
       .pipe(takeUntil(this.observableUnsubscribe))
       .subscribe(response => {
-        content = response.item;
+        debugger;
+        content = response;
         localStorage.topic = JSON.stringify(content);
         this.notifyChange();
       });

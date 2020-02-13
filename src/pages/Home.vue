@@ -30,15 +30,18 @@ export default {
     pageType: String
   },
   data: () => ({
-    content: Object
+    content: Object,
+    linkedItems: Object
   }),
   computed: {
     loaded() {
+      debugger;
       return Object.keys(this.content).length !== 0
     }
   },
   created() {},
   mounted: function() {
+    debugger;
     Store.subscribe();
     Store.addChangeListener(this.onChange);
     Store.fetchFromCMS("home");
@@ -52,8 +55,9 @@ export default {
   methods: {
     onChange: function() {
       const page = Store.get();
+      debugger;
       if (page) {
-        this.content = flatten(page);
+        this.content = flatten(page.items);
       }
     }
   },

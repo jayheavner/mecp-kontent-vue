@@ -20,6 +20,7 @@ export class HomePage extends ContentItem {
         debugger;
       },
       propertyResolver: elementName => {
+        debugger;
         if (elementName === 'about_title') {
           return 'aboutTitle';
         }
